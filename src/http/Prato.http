@@ -1,0 +1,47 @@
+//Teste de Requisições REST
+@baseURL = http://localhost:3000
+@id = 63559b032dea6826268a985c
+
+###
+// GET - Lista todas os veículos
+GET {{baseURL}}/pratos
+Content-Type: application/json
+
+###
+// GET - Lista um único veículo pelo ID
+GET {{baseURL}}/pratos/{{id}}
+Content-Type: application/json
+
+###
+// POST - Inclui um novo veículo
+POST {{baseURL}}/pratos
+Content-Type: application/json
+
+{
+    "nome": "Parmegiana de Frango",
+    "preco": 21.50,
+    "descricao": "Arroz, Feijão, Parmegiana de Frango",
+    "diasSemana":["seg", "sex"],
+    "acompanhamentos": ["fritas", "legumes"],
+    "status":"ativo"
+}
+
+###
+// PUT - Altera dados de um veículo existente
+PUT {{baseURL}}/pratos
+Content-Type: application/json
+
+{
+    "_id":"619596aa1ef3ee5198461280",
+    "nome": "Parmegiana de Frango",
+    "preco": 21.50,
+    "descricao": "Arroz, Feijão, Parmegiana de Frango",
+    "diasSemana":["seg", "sex"],
+    "acompanhamentos": ["fritas", "legumes"],
+    "status":"ativo"
+}
+
+###
+// DELETE - Exclui um veículo pelo ID
+DELETE {{baseURL}}/pratos/{{id}}
+Content-Type: application/json
