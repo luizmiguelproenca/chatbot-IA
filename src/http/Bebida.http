@@ -1,0 +1,41 @@
+//Teste de Requisições REST
+@baseURL = http://localhost:3000
+@id = 635d4243fc0e1a471cb20c65
+
+###
+// GET -
+GET {{baseURL}}/bebidas
+Content-Type: application/json
+
+###
+// GET -
+GET {{baseURL}}/bebidas/{{id}}
+Content-Type: application/json
+
+###
+// POST -
+POST {{baseURL}}/bebidas
+Content-Type: application/json
+
+{
+    "nome": "Água 500ml",
+    "preco": 2.50,
+    "status":"ativo"
+}
+
+###
+// PUT -
+PUT {{baseURL}}/bebidas
+Content-Type: application/json
+
+{
+    "_id":"",
+    "nome": "",
+    "preco": 5.50,
+    "status":"ativo"
+}
+
+###
+// DELETE -
+DELETE {{baseURL}}/bebidas/{{id}}
+Content-Type: application/json

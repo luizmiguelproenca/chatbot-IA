@@ -3,6 +3,8 @@ require('dotenv').config()
 const cors = require('cors') 
 const InicializaMongoServer = require('./config/db')
 const rotasPrato = require('./routes/Prato')
+const rotasBebida = require('./routes/Bebida')
+const rotasAcompanhamento = require('./routes/Acompanhamento')
 
 InicializaMongoServer()
 const app = express()
@@ -22,6 +24,9 @@ app.get("/",(req, res) => {
 })
 //Rotas do App
 app.use("/pratos", rotasPrato)
+app.use("/bebidas", rotasBebida)
+app.use("/acompanhamentos", rotasAcompanhamento)
+
 
 //Rota para tratamento de erro 404
 app.use(function(req, res) {

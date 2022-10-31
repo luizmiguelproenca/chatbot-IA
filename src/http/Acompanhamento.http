@@ -1,0 +1,39 @@
+//Teste de Requisições REST
+@baseURL = http://localhost:3000
+@id = 635d4cbc4b4d17a82e00517c
+
+###
+// GET -
+GET {{baseURL}}/acompanhamentos
+Content-Type: application/json
+
+###
+// GET -
+GET {{baseURL}}/acompanhamentos/{{id}}
+Content-Type: application/json
+
+###
+// POST -
+POST {{baseURL}}/acompanhamentos
+Content-Type: application/json
+
+{
+    "nome": "Macarrão",
+    "status":"ativo"
+}
+
+###
+// PUT -
+PUT {{baseURL}}/acompanhamentos
+Content-Type: application/json
+
+{
+    "_id":"635d4cbc4b4d17a82e00517c",
+    "nome": "Legumes Cozido",
+    "status":"ativo"
+}
+
+###
+// DELETE -
+DELETE {{baseURL}}/acompanhamentos/{{id}}
+Content-Type: application/json

@@ -3,45 +3,45 @@
 @id = 63559b032dea6826268a985c
 
 ###
-// GET - Lista todas os veículos
+// GET -
 GET {{baseURL}}/pratos
 Content-Type: application/json
 
 ###
-// GET - Lista um único veículo pelo ID
+// GET -
 GET {{baseURL}}/pratos/{{id}}
 Content-Type: application/json
 
 ###
-// POST - Inclui um novo veículo
+// POST -
 POST {{baseURL}}/pratos
 Content-Type: application/json
 
 {
-    "nome": "Parmegiana de Frango",
-    "preco": 21.50,
-    "descricao": "Arroz, Feijão, Parmegiana de Frango",
+    "nome": "Filé de Saint Peter",
+    "preco": 19.90,
+    "descricao": "Arroz, Feijão",
     "diasSemana":["seg", "sex"],
     "acompanhamentos": ["fritas", "legumes"],
     "status":"ativo"
 }
 
 ###
-// PUT - Altera dados de um veículo existente
+// PUT -
 PUT {{baseURL}}/pratos
 Content-Type: application/json
 
 {
-    "_id":"619596aa1ef3ee5198461280",
-    "nome": "Parmegiana de Frango",
-    "preco": 21.50,
-    "descricao": "Arroz, Feijão, Parmegiana de Frango",
+    "_id":"6359be88c7e644a7de814876",
+    "nome": "Bife ao Molho Madeira",
+    "preco": 25.50,
+    "descricao": "Arroz, Feijão, Bife",
     "diasSemana":["seg", "sex"],
-    "acompanhamentos": ["fritas", "legumes"],
+    "acompanhamentos": ["fritas", "farofa"],
     "status":"ativo"
 }
 
 ###
-// DELETE - Exclui um veículo pelo ID
+// DELETE -
 DELETE {{baseURL}}/pratos/{{id}}
 Content-Type: application/json
